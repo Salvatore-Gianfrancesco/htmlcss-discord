@@ -1,0 +1,300 @@
+:root{
+    --ds-header-background: #255ee9;
+    --ds-footer-background: #22262a;
+    --ds-main-background-1: #ffffff;
+    --ds-main-background-2: #d3d2d2;
+    --ds-discord-color: #7389db;
+
+    --ds-header-blocks: #dba420;
+    --ds-main-background-start: #01008a;
+    --ds-main-content-start: #ef82ef;
+    --ds-main-content-image: #1f90fe;
+    --ds-main-content-text: #ffc1ca;
+    --ds-main-content-end: #238b23;
+    --ds-footer-left: #f18081;
+    --ds-footer-right: #20b3ab;
+    --ds-footer-end: #7efed4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 70%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+}
+
+[class^="col-"]{
+    padding: 0 1rem;
+}
+
+.col-1{
+    width: calc((100% /12) * 1);
+}
+
+.col-2{
+    width: calc((100% /12) * 2);
+}
+
+.col-3{
+    width: calc((100% /12) * 3);
+}
+
+.col-4{
+    width: calc((100% /12) * 4);
+}
+
+.col-5{
+    width: calc((100% /12) * 5);
+}
+
+.col-6{
+    width: calc((100% /12) * 6);
+}
+
+.col-7{
+    width: calc((100% /12) * 7);
+}
+
+.col-8{
+    width: calc((100% /12) * 8);
+}
+
+.col-9{
+    width: calc((100% /12) * 9);
+}
+
+.col-10{
+    width: calc((100% /12) * 10);
+}
+
+.col-11{
+    width: calc((100% /12) * 11);
+}
+
+.col-12{
+    width: calc((100% /12) * 12);
+}
+
+button{
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem;
+}
+
+/* header */
+
+header{
+    background-color: var(--ds-header-background);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+header [class^="col-"]{
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+header .row{
+    align-items: center;
+}
+
+header .col-9{
+    justify-content: center;
+}
+
+header .col-3:last-of-type{
+    justify-content: flex-end;
+}
+
+.logo{
+    height: 1.5rem;
+}
+
+header a{
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+header a:hover,
+header button:hover{
+    text-decoration: underline;
+}
+
+header button{
+    background-color: white;
+}
+
+/* /header */
+
+/* main */
+
+.main_start{
+    height: 300px;
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-repeat: round;
+    text-align: center;
+}
+
+.main_start .container{
+    width: 40%;
+    padding: 4rem 0rem;
+}
+
+h1,
+.main_start p{
+    color: white;
+}
+
+.main_start p{
+    padding: 1rem 0rem;
+}
+
+.main_start button{
+    margin: 0rem 0.5rem;
+}
+
+.main_start button:first-of-type{
+    background-color: white;
+}
+
+.main_start button:last-of-type{
+    background-color: var(--ds-footer-background);
+    color: white;
+}
+
+.main_section_1{
+    background-color: var(--ds-main-background-1);
+    padding: 2rem 0rem;
+}
+
+.main_section_2{
+    background-color: var(--ds-main-background-2);
+    padding: 2rem 0rem;
+}
+
+.main_section_1 .container,
+.main_section_2 .container{
+    display: flex;
+    align-items: center;
+}
+
+.main_section_1 img,
+.main_section_2 img{
+    height: 17rem;
+}
+
+main .col-7,
+main .col-5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 0.5rem;
+}
+
+.main_end{
+    background-color: var(--ds-main-background-2);
+    padding: 2rem 0rem;
+}
+
+.main_end .container{
+    text-align: center;
+}
+
+.main_end p{
+    padding: 1rem 0rem;
+}
+
+.main_end h3{
+    background-image: url("../img/stars.svg");
+    background-size: cover;
+    background-repeat: round;
+    padding: 2rem 0rem;
+}
+
+.main_end button{
+    background-color: var(--ds-discord-color);
+    color: white;
+}
+
+/* /main */
+
+/* footer */
+
+footer{
+    background-color: var(--ds-footer-background);
+    color: white;
+}
+
+.footer_link{
+    padding: 2rem 0rem;
+}
+
+footer h3{
+    color: var(--ds-discord-color);
+}
+
+footer img{
+    height: 0.8rem;
+}
+
+.text_footer{
+    padding: 0.5rem 0rem;
+}
+
+.social{
+    color: white;
+}
+
+.social img{
+    margin: 0rem 0.2rem;
+}
+
+h4{
+    color: var(--ds-discord-color);
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.2rem 0rem;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.footer_end{
+    border-top: 1px solid var(--ds-discord-color);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.footer_end .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_end button{
+    background-color: var(--ds-discord-color);
+    color: white;
+}
+
+/* /footer */
