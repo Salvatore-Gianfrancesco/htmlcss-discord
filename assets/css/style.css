@@ -4,23 +4,23 @@
     --ds-main-background-1: #ffffff;
     --ds-main-background-2: #d3d2d2;
     --ds-discord-color: #7389db;
-
-    --ds-header-blocks: #dba420;
-    --ds-main-background-start: #01008a;
-    --ds-main-content-start: #ef82ef;
-    --ds-main-content-image: #1f90fe;
-    --ds-main-content-text: #ffc1ca;
-    --ds-main-content-end: #238b23;
-    --ds-footer-left: #f18081;
-    --ds-footer-right: #20b3ab;
-    --ds-footer-end: #7efed4;
 }
+
+/* #region Common */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* #endregion Common */
+
+/* #region Utilities */
 
 .container{
     width: 70%;
@@ -84,26 +84,17 @@
     width: calc((100% /12) * 12);
 }
 
-button{
-    border-radius: 1rem;
-    padding: 0.2rem 0.5rem;
-}
+/* #endregion Utilities */
 
-/* header */
+/* #region Header */
 
 header{
     background-color: var(--ds-header-background);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 1rem 0rem;
 }
 
 header [class^="col-"]{
-    height: 80%;
     display: flex;
-    align-items: center;
-}
-
-header .row{
     align-items: center;
 }
 
@@ -126,21 +117,32 @@ header a{
     font-size: 0.9rem;
 }
 
-header a:hover,
-header button:hover{
+header a:hover{
     text-decoration: underline;
+}
+
+button{
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem;
+    border: 0;
 }
 
 header button{
     background-color: white;
 }
 
-/* /header */
+header button:hover{
+    box-shadow: 0px 2px 3px #00000085;
+    color: var(--ds-discord-color);
+}
 
-/* main */
+/* #endregion Header */
+
+/* #region Main */
+
+/* main_start */
 
 .main_start{
-    height: 300px;
     background-image: url("../img/jumbo.png");
     background-size: cover;
     background-repeat: round;
@@ -152,7 +154,7 @@ header button{
     padding: 4rem 0rem;
 }
 
-h1,
+.main_start h1,
 .main_start p{
     color: white;
 }
@@ -169,10 +171,22 @@ h1,
     background-color: white;
 }
 
+.main_start button:first-of-type:hover{
+    box-shadow: 0px 2px 3px #00000085;
+    color: var(--ds-discord-color);
+}
+
 .main_start button:last-of-type{
     background-color: var(--ds-footer-background);
     color: white;
 }
+
+.main_start button:last-of-type:hover{
+    box-shadow: 0px 2px 3px #00000085;
+}
+/* /main start */
+
+/* main_sections */
 
 .main_section_1{
     background-color: var(--ds-main-background-1);
@@ -198,15 +212,18 @@ h1,
 main .col-7,
 main .col-5{
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
 }
 
-h2{
+.main_section_1 h1,
+.main_section_2 h1{
     margin-bottom: 0.5rem;
 }
+
+/* /main_sections */
+
+/* main_end */
 
 .main_end{
     background-color: var(--ds-main-background-2);
@@ -233,9 +250,15 @@ h2{
     color: white;
 }
 
-/* /main */
+.main_end button:hover{
+    box-shadow: 0px 2px 3px #00000085;
+}
 
-/* footer */
+/* /main_end */
+
+/* #endregion Main */
+
+/* #region Footer */
 
 footer{
     background-color: var(--ds-footer-background);
@@ -246,48 +269,51 @@ footer{
     padding: 2rem 0rem;
 }
 
-footer h3{
+footer h3,
+footer h5{
     color: var(--ds-discord-color);
+    margin-bottom: 0.5rem;
+}
+
+.text_footer{
+    padding: 1rem 0rem;
 }
 
 footer img{
     height: 0.8rem;
 }
 
-.text_footer{
-    padding: 0.5rem 0rem;
+.text_footer img:last-of-type{
+    height: 0.4rem;
+}
+
+footer .col-2{
+    font-size: 0.8rem;
 }
 
 .social{
     color: white;
 }
 
-.social img{
-    margin: 0rem 0.2rem;
-}
-
-h4{
-    color: var(--ds-discord-color);
+.social i{
+    padding: 0rem 0.5rem;
 }
 
 footer a{
     text-decoration: none;
     color: white;
     display: block;
-    padding: 0.2rem 0rem;
+    padding: 0.5rem 0rem;
 }
 
 footer a:hover{
     text-decoration: underline;
 }
 
-.footer_end{
-    border-top: 1px solid var(--ds-discord-color);
+.footer_end .container{
     padding-top: 1rem;
     padding-bottom: 2rem;
-}
-
-.footer_end .container{
+    border-top: 1px solid var(--ds-discord-color);
     display: flex;
     justify-content: space-between;
 }
@@ -297,4 +323,8 @@ footer a:hover{
     color: white;
 }
 
-/* /footer */
+.footer_end button:hover{
+    box-shadow: 0px 2px 3px #738adb85;
+}
+
+/* #endregion Footer */
